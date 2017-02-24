@@ -12,9 +12,9 @@ mid = ['the','a','my']
 light = ['light','lamp']
 
 pp_verb = pp.Or([pp.CaselessLiteral(x) for x in verb])
-pp_mid = pp.ZeroOrMore(pp.Or([pp.CaselessLiteral(x) for x in mid]))
+pp_mid = pp.Optional(pp.Or([pp.CaselessLiteral(x) for x in mid]))
 pp_light = pp.Or([pp.CaselessLiteral(x) for x in light])
-pp_parse = pp_verb  + pp_mid + pp_light
+pp_parse = pp_verb + pp_mid + pp_light
 
 test_str=[
     'start the light',
@@ -23,7 +23,7 @@ test_str=[
     'Start Lamp',
     'Start a a a Lamp',
     'xxx lamp',
-    'start lamp please',
+    'start xxx lamp please',
     'open lamp, open lamp',
     'please open the lamp',
     'please open the lamp!!!',
