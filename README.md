@@ -10,6 +10,8 @@ pyparsing doc: http://infohost.nmt.edu/tcc/help/pubs/pyparsing/web/index.html
 
 doc_test.py copied some code from official doc
 
+others: http://pyparsing.wikispaces.com/Examples
+
 my test:
 
 * control_light.py
